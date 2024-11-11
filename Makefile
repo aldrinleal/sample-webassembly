@@ -13,7 +13,7 @@ run-local: server
 	wasmedge ./main.wasm
 
 run-podman:
-	podman run --net=host --platform wasi/wasm --rm 235368163414.dkr.ecr.us-west-2.amazonaws.com/sample-go-wasi:latest
+	podman run -p 8000:8000 --platform wasi/wasm --rm 235368163414.dkr.ecr.us-west-2.amazonaws.com/sample-go-wasi:latest
 
 push:
 	aws ecr get-login-password --region us-west-2 | podman login -u AWS --password-stdin $(REGISTRY)
