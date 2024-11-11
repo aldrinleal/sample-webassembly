@@ -3,9 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
-	"github.com/stealthrocket/net/wasip1"
 	ginlogrus "github.com/toorop/gin-logrus"
-	"net/http"
 	"os"
 	"strings"
 )
@@ -50,19 +48,5 @@ func main() {
 
 	listenerAddr := getPort()
 
-	listener, err := wasip1.Listen("tcp", listenerAddr)
-
-	if nil != err {
-		log.Fatalf("Oops: %s", err)
-	}
-
-	log.Infof("Going to listen on %s", listenerAddr)
-
-	server := &http.Server{
-		Handler: e,
-	}
-
-	if err := server.Serve(listener); nil != err {
-		log.Fatalf("Oops: %s", err)
-	}
+	run(listenerAddr, e)
 }

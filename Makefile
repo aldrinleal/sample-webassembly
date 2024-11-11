@@ -6,7 +6,7 @@ IMAGE=$(REGISTRY)/sample-go-wasi:latest
 all: server
 
 server:
-	GOOS=wasip1 GOARCH=wasm go build -o main.wasm cmd/server/main.go
+	GOOS=wasip1 GOARCH=wasm go build -o main.wasm ./cmd/server/
 	buildah build --platform=wasi/wasm -t $(IMAGE) .
 
 run-local: server
