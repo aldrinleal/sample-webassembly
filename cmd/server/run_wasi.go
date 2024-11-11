@@ -1,5 +1,5 @@
-//go:build wasip1
-// +build wasip1
+//go:build wasm
+// +build wasm
 
 package main
 
