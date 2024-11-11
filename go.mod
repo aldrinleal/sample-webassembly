@@ -5,7 +5,7 @@ go 1.21.4
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joomcode/errorx v1.2.0
-	github.com/sirupsen/logrus v1.9.3
+	github.com/sirupsen/logrus v1.9.4-0.20230606125235-dd1b4c2e81af
 	github.com/toorop/gin-logrus v0.0.0-20210225092905-2c785434f26f
 )
 

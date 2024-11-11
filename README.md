@@ -15,5 +15,8 @@ make push # oops you can't do that unless you change :)
 
 # TODO
 
-Figure out how to run in Kubernetes (k3s)
+https://github.com/sirupsen/logrus/issues/1394
+
+Figure out how to run in Kubernetes (k3s/containerd)
+Automate build with Github Actions
 
