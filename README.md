@@ -1,8 +1,8 @@
-# Sample Go / WASI Contaienr
+# Sample Go / WASI Container
 
 ## Dependencies
 
-Tested on Fedora Workstation, which needs crun-wasmedge and podman set up among others
+Tested on Fedora Workstation, which needs crun-wasmedge / buildah and podman set up among others
 
 ## Usage
 
@@ -15,4 +15,5 @@ make push # oops you can't do that unless you change :)
 
 # TODO
 
-Figure out how to run in Kubernetes
+Figure out how to run in Kubernetes (k3s)
+
